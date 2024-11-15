@@ -1,0 +1,11 @@
+h1{
+    font-size: xx-large;
+    color:blueviolet;
+}
+:host{
+    display: block;
+    background: grey;
+}
+:host(.active){
+    background-color: brown;
+}

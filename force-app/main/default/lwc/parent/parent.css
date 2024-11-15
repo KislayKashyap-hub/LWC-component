@@ -1,0 +1,14 @@
+.first{
+    color: blue;
+}
+.second{
+    color: red;
+}
+h1{
+    font-size: xx-large;
+    color:aqua;
+}
+c-child{
+    display: block;
+    background: yellow;
+}

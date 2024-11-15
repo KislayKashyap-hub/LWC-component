@@ -1,0 +1,9 @@
+<apex:page >
+    <h1>
+        My First Visual Force Page
+    </h1>
+    <p>
+        So, I started write VF code >>>
+        Second day of VF Kislay Kashyap
+    </p>
+</apex:page>

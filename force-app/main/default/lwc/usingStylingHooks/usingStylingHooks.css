@@ -1,0 +1,11 @@
+.myNewStyleForButton {
+    /* Override button background and border colors */
+    --sds-c-button-brand-color-background: orange;
+    --sds-c-button-brand-color-border: blue;
+}
+
+.myNewStyleForBadge {
+    /* Override badge background and text colors */
+    --sds-c-badge-color-background: green;
+    --sds-c-badge-color-default: aqua;
+}

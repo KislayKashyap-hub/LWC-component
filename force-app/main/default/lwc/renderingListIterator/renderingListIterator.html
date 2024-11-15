@@ -1,0 +1,22 @@
+<template>
+    <lightning-card title="Rendering List Using Iterator">
+        <ul class="slds-m-around_medium">
+            <template iterator:it={contacts}>
+                <li key={it.value.Id}>
+                    <!-- Render a border at the start of the list -->
+                    <template if:true={it.first}>
+                        <div class="list-first"></div>
+                    </template>
+                    
+                    <!-- Display Contact Name and Title -->
+                    {it.value.Name}, {it.value.Title}
+                    
+                    <!-- Render a border at the end of the list -->
+                    <template if:true={it.last}>
+                        <div class="list-last"></div>
+                    </template>
+                </li>
+            </template>
+        </ul>
+    </lightning-card>
+</template>

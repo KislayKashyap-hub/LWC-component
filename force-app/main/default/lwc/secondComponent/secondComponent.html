@@ -1,0 +1,9 @@
+<!-- 2Component.html -->
+<template>
+    <lightning-input label="First Name" value={firstName} onchange={handleFirstNameChange}></lightning-input>
+    <lightning-input label="Last Name" value={lastName} onchange={handleLastNameChange}></lightning-input>
+    
+    <template if:true={fullName}>
+        <p>Full Name: {fullName}</p>
+    </template>
+</template>

@@ -1,0 +1,40 @@
+<template>
+    <lightning-card title="Initiated Cases Records" icon-name="custom:custom14">
+        <template if:true={hasCases}>
+            <lightning-datatable
+                key-field="Id"
+                data={cases}
+                columns={columns}
+                onrowaction={handleViewEvent}>
+            </lightning-datatable>
+        </template>
+        <template if:false={hasCases}>
+            <p>No cases available for this account.</p>
+        </template>
+    </lightning-card>
+
+    <template if:true={viewCaseRecord}>
+        <lightning-card title="Case Records">
+            <table class="slds-table slds-table_bordered slds-table_cell-buffer">
+                <thead>
+                    <tr>
+                        <th>Case Number</th>
+                        <th>Priority</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{selectedCase.CaseNumber}</td>
+                        <td>
+                            <input type="text" value={selectedCase.Priority} data-field="Priority" onchange={handleInputChange} />
+                        </td>
+                        <td>
+                            <input type="text" value={selectedCase.Status} data-field="Status" onchange={handleInputChange} />
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </lightning-card>
+    </template>
+</template>

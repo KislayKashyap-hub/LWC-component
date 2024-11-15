@@ -1,0 +1,35 @@
+<template>
+    <lightning-card title="Using Styling Hooks">
+        <div class="slds-p-around_medium">
+            <div>Base Lightning Components</div>
+            
+            <!-- Regular styled button -->
+            <lightning-button 
+                class="slds-p-around_medium" 
+                variant="brand" 
+                label="Submit">
+            </lightning-button>
+            
+            <!-- Regular styled badge -->
+            <lightning-badge label="Active">
+            </lightning-badge>
+            
+            <br/>
+
+            <div>Base Lightning Components With Custom Styling</div>
+            
+            <!-- Custom styled button using styling hooks -->
+            <lightning-button 
+                class="myNewStyleForButton slds-p-around_medium" 
+                variant="brand" 
+                label="Submit">
+            </lightning-button>
+            
+            <!-- Custom styled badge using styling hooks -->
+            <lightning-badge 
+                class="myNewStyleForBadge" 
+                label="Active">
+            </lightning-badge>
+        </div>
+    </lightning-card>
+</template>

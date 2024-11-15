@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="Select Users" icon-name="custom:custom27">
+        <lightning-combobox label="Active User" placeholder="Choose a User" options={allActiveUsers} onchange={userSelected}></lightning-combobox>
+
+        <lightning-button label="Initiate Case" variant="brand" onclick={createCaseEvent} disabled={isLoading}></lightning-button>
+
+        <lightning-button label="Save" variant="brand" class="slds-m-left_x-small" onclick={updateSelectedCase}></lightning-button>
+
+        <template if:true={isLoading}>
+            <lightning-spinner alternative-text="Loading..." size="medium"></lightning-spinner>
+        </template>
+    </lightning-card>
+
+    <c-child-component cases={cases} oncaseupdated={handleCaseUpdated}></c-child-component>
+</template>

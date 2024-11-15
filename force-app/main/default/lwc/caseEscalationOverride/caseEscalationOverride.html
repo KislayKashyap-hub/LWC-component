@@ -1,0 +1,11 @@
+<template>
+    <lightning-button label="Mark as Resolved" onclick={handleMarkResolved}></lightning-button>
+    <lightning-button label="Cancel Escalation" onclick={handleCancelEscalation}></lightning-button>
+
+    <template if:true={isEscalated}>
+        <p>The case is escalated.</p>
+    </template>
+    <template if:false={isEscalated}>
+        <p>The case is not escalated.</p>
+    </template>
+</template>
